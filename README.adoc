@@ -1,0 +1,16 @@
+= Shelly
+
+Minimal & extendable flake.parts shell module
+
+== Why?
+
+Exactly, why? There is already https://github.com/numtide/devshell and https://github.com/cachix/devenv, why do I need to create another one?
+
+Those are great, tested solutions, which already used by community. The problem with two solutions above that they are already too opinionated, and include some things that I would prefer to not have, having little to no options to disable them.
+
+devshell already includes some sort of task runner, which can't be disabled, and which interrupts me with false promise that project uses that thing, instead of `Just`/`Makefile`/`cargo xtask` which I already use, or integrating with https://github.com/juspay/just-flake, https://github.com/Platonic-Systems/mission-control which I may want to use.
+It also includes git-hooks support, which is not compatible with https://github.com/cachix/git-hooks.nix. Or course I may not use them, but if I want to implement some sort of integration, then I will have two different ways of doing the same thing, I don't think it is the good idea to have that in the common community shell module. I also don't like how the language support is implemented in here (Rust support supports fenix/nixpkgs, but not oxalica's rust-overlay and there is nothing to support crane), and I also can't do anything with it, it is just already here, confusing me with the predefined options, which will never work for me.
+
+devenv... Is the whole another story. This project is not flake-first, and even not nix-first, despite it being nix-based project, it implements many things out of the box, which I don't want to have, and due to those many things implemented - it already limits itself in how those things are implemented. I spent couple of hours trying to implement nix pure mode support in it, but most of the modules depend on those impurities to exist.
+
+Out of the box, shelly will not have anything except the basic functionality, everything else should be implemented by the other projects, which will extend shelly options set. Right now, shelly implements everything it should have, my plan is to have some bugs in it fixed, and then to contribute it to flake-parts itself, which should be possible due to small codebase size, and due to that other projects (devenv/devshell/etc) might be implemented on top of shelly.
