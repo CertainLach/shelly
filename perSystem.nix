@@ -67,7 +67,7 @@ in {
   options = with lib.types; {
     shelly.shells = mkOption {
       default = {};
-      type = lib.types.lazyAttrsOf (
+      type = lazyAttrsOf (
         submodule ({config, ...}: {
           # TODO: inputsFrom, support for "legacy" buildInputs/nativeBuildInputs?
           options = {

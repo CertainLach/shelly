@@ -18,6 +18,22 @@
         "type": "github"
       }
     },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1737077867,
+        "narHash": "sha256-+VpCgelbCgJvxos+4sAVaKfwYRKrkflsWcYVOhG0mXg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "0ab8bdef1a34b67d2ecc8f86763cbb3cb5297699",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "release-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-lib": {
       "locked": {
         "lastModified": 1735774519,
@@ -32,7 +48,21 @@
     },
     "root": {
       "inputs": {
-        "flake-parts": "flake-parts"
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs",
+        "shelly": "shelly"
+      }
+    },
+    "shelly": {
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-SqOrugx87Gyo3jwPmBAWp7dLWa9ndnPVIU3rzPTjQ4c=",
+        "path": "/nix/store/8azfic9xmf5v9agshdibvkpsr13k1j17-source",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/8azfic9xmf5v9agshdibvkpsr13k1j17-source",
+        "type": "path"
       }
     }
   },
