@@ -55,15 +55,14 @@
     },
     "shelly": {
       "locked": {
-        "lastModified": 0,
-        "narHash": "sha256-SqOrugx87Gyo3jwPmBAWp7dLWa9ndnPVIU3rzPTjQ4c=",
-        "path": "/nix/store/8azfic9xmf5v9agshdibvkpsr13k1j17-source",
+        "path": "../",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/8azfic9xmf5v9agshdibvkpsr13k1j17-source",
+        "path": "../",
         "type": "path"
-      }
+      },
+      "parent": []
     }
   },
   "root": "root",

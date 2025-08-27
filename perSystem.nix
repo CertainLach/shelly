@@ -43,7 +43,9 @@
 
     ${textClosureMap id withHeadlines (attrNames withHeadlines)}
 
-    exit $_status
+    if (( _status > 0 )); then
+      exit $_status
+    fi
   '';
   scriptType = with lib.types; let
     scriptOptions = {
